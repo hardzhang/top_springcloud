@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sapp" />
+        <module name="sappsecmore" />
+        <module name="sconfigcenter" />
+        <module name="seureka" />
+        <module name="szuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sapp" target="1.7" />
+      <module name="sappsecmore" target="1.6" />
+      <module name="sconfigcenter" target="1.7" />
+      <module name="seureka" target="1.8" />
+      <module name="szuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

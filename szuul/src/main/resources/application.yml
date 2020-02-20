@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-cloud-zuul
+# 服务端口号
+server:
+  port: 9099
+#Eureka 相关配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8099/eureka/
+zuul:
+  routes:
+    api-a:
+      path: /eureka-client1/**
+      service-id: http://localhost:52601/
+      sensitive-headers:
+    api-b:
+      path: /eureka-client2/**
+      service-id: EUREKA-CLIENT2
