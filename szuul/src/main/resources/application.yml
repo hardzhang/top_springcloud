@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: spring-cloud-zuul
 # 服务端口号
@@ -21,7 +23,7 @@ zuul:
 security:
   oauth2:
     client:
-      access-token-uri:http://localhost:8080/oauth/token
+      access-token-uri: http://localhost:8080/oauth/token
       user-authorization-uri: http://localhost:8080/oauth/authorize
       client-id: client_test
       client-secret: secret_test

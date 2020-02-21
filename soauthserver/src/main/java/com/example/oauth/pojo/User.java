@@ -1,16 +1,26 @@
-package com.linewell.demo;
+package com.example.oauth.pojo;
 
 /**
  * @Description:
  * @Author: Administrator
- * @Date: 2020/2/21 0021 14:54
+ * @Date: 2020/2/21 0021 16:19
  * @Copyright: Fujian Linewell Software Co., Ltd. All rights reserved.
  */
 public class User {
 
+    public User(){}
+
+    public User(Integer seq,String userName,String password){
+       this.seq = seq;
+       this.userName = userName;
+       this.password = password;
+    }
+
+    private Integer seq;
+
     private String userName;
 
-    private String password;
+    private String  password;
 
     public String getUserName() {
         return userName;
@@ -26,5 +36,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Integer getSeq() {
+        return seq;
+    }
+
+    public void setSeq(Integer seq) {
+        this.seq = seq;
     }
 }

@@ -1,29 +1,31 @@
 package com.linewell.demo;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.example.oauth.pojo.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.oauth2.provider.token.TokenStore;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.security.Principal;
 
 /**
  * @Description:
  * @Author: Administrator
- * @Date: 2020/2/21 0021 14:06
+ * @Date: 2020/2/21 0021 16:17
  * @Copyright: Fujian Linewell Software Co., Ltd. All rights reserved.
  */
 @RestController
-@RequestMapping("/api/user")
 public class UserController {
 
-    @GetMapping("/me")
-    public Principal user(Principal principal) {
-        return principal;
-    }
+    @Autowired
+    private TokenStore tokenStore;
 
-    @GetMapping("/{name}")
-    public String getUserName(@PathVariable String name) {
-        return "hello,"+ name;
+    @PostMapping("/bar")
+    public String bar(@RequestHeader("Authorization") String auth) {
+
+        MyUserDetails userDetails = (MyUserDetails) tokenStore.readAuthentication(auth.split(" ")[1]).getPrincipal();
+
+        User user = userDetails.getUser();
+
+        return user.getUserName() + ":" + user.getPassword();
     }
 }
