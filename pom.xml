@@ -22,6 +22,7 @@
      <module>seureka</module>
      <module>soauth</module>
      <module>szuul</module>
+       <module>soauthserver</module>
    </modules>
 
 </project>
