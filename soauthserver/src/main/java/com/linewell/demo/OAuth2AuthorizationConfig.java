@@ -40,7 +40,7 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
                 .withClient("eureka-client1")//客户端ID
                 .authorizedGrantTypes("password", "refresh_token")//设置验证方式
                 .scopes("read", "write")
-                .secret("123456")
+                .secret("secret_test")
                 .accessTokenValiditySeconds(10000) //token过期时间
                 .refreshTokenValiditySeconds(10000); //refresh过期时间
     }
