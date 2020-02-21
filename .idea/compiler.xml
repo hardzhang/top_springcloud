@@ -10,6 +10,7 @@
         <module name="sappsecmore" />
         <module name="sconfigcenter" />
         <module name="seureka" />
+        <module name="soauth" />
         <module name="szuul" />
       </profile>
     </annotationProcessing>
@@ -18,7 +19,9 @@
       <module name="sappsecmore" target="1.6" />
       <module name="sconfigcenter" target="1.7" />
       <module name="seureka" target="1.8" />
+      <module name="soauth" target="1.5" />
       <module name="szuul" target="1.8" />
+      <module name="top_springcloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
