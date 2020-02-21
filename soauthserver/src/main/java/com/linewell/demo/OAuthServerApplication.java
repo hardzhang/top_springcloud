@@ -2,7 +2,6 @@ package com.linewell.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @Description:
@@ -11,7 +10,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @Copyright: Fujian Linewell Software Co., Ltd. All rights reserved.
  */
 @SpringBootApplication
-@EnableDiscoveryClient
 public class OAuthServerApplication {
 
     public static void main(String[] args){

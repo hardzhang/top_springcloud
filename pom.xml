@@ -23,6 +23,7 @@
      <module>soauth</module>
      <module>szuul</module>
        <module>soauthserver</module>
+       <module>soauthserver2</module>
    </modules>
 
 </project>

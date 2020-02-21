@@ -6,15 +6,15 @@ spring:
   application:
     name: microsrv-oauth2-server
   datasource:
-    url: jdbc:mysql://192.168.137.3:3306/authtest?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://192.168.153.3:3306/oauth?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     username: root
-    password: linewell@2018
+    password: 123456
     driver: com.mysql.cj.jdbc.Driver
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
-        minIdle: 10
-        idle-timeout: 10000
-        maximumPoolSize: 30
+      minIdle: 10
+      idle-timeout: 10000
+      maximumPoolSize: 30
 server:
   port: 8080
 eureka:
