@@ -1,6 +1,5 @@
 package com.linewell.demo.sappmore.controller;
 
-import com.linewell.demo.sappmore.inter.FeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,11 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ConsumerController {
 
     @Autowired
-    FeignService feignService;
+    //FeignService feignService;
 
     @RequestMapping("/consumer")
     public String helloConsumer(){
-        return feignService.hello();
+        return null;//feignService.hello();
     }
 
 }

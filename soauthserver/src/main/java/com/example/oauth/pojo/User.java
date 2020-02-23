@@ -1,12 +1,14 @@
 package com.example.oauth.pojo;
 
+import java.io.Serializable;
+
 /**
  * @Description:
  * @Author: Administrator
  * @Date: 2020/2/21 0021 16:19
  * @Copyright: Fujian Linewell Software Co., Ltd. All rights reserved.
  */
-public class User {
+public class User implements Serializable {
 
     public User(){}
 

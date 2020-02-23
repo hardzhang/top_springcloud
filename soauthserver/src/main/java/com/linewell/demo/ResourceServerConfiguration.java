@@ -12,12 +12,15 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
+        /*http.authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .antMatchers("/webjars/**").permitAll()
                 .antMatchers(PermitAllUrl.permitAllUrl()).permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic()
-                .and().csrf().disable();
+                .and().csrf().disable();*/
+        http.authorizeRequests()
+                .antMatchers(PermitAllUrl.permitAllUrl()).permitAll() // 放开权限的url
+                .anyRequest().authenticated();
     }
 }

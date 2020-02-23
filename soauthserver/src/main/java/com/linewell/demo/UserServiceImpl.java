@@ -24,10 +24,10 @@ public class UserServiceImpl implements UserService {
     private final static Set<User> users = new HashSet<>();
 
     static {
-        users.add(new User(1, "test-user1", "12345"));
-        users.add(new User(2, "test-user2", "12345"));
-        users.add(new User(3, "test-user3", "12345"));
-        users.add(new User(4, "test-user4", "12345"));
+        users.add(new User(1, "test-user1", "$2a$10$dA59l0QEOcm7Lg41T643cuOtLYEb4zZG5vgRlMnOj/IORtzQFzpWK"));
+        users.add(new User(2, "test-user2", "$2a$10$dA59l0QEOcm7Lg41T643cuOtLYEb4zZG5vgRlMnOj/IORtzQFzpWK"));
+        users.add(new User(3, "test-user3", "$2a$10$dA59l0QEOcm7Lg41T643cuOtLYEb4zZG5vgRlMnOj/IORtzQFzpWK"));
+        users.add(new User(4, "test-user4", "$2a$10$dA59l0QEOcm7Lg41T643cuOtLYEb4zZG5vgRlMnOj/IORtzQFzpWK"));
     }
 
     @Override

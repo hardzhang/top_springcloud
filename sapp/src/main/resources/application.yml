@@ -1,5 +1,9 @@
 server:
   port: 52601
+  servlet:
+    session:
+      cookie:
+        name: OAUTH2SESSION
 
 spring:
   application:
@@ -33,3 +37,4 @@ security:
       userAuthorizationUri: http://localhost:8080/oauth/authorize
     resource:
       userInfoUri: http://localhost:8080/principal
+

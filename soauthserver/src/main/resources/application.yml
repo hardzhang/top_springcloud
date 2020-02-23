@@ -16,6 +16,22 @@ spring:
       minIdle: 10
       idle-timeout: 10000
       maximumPoolSize: 30
+  #redis配置
+  redis:
+    database: 10
+    host: 192.168.153.3
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 5000
+    expireTime: 180
+
+
 server:
   port: 8080
 eureka:

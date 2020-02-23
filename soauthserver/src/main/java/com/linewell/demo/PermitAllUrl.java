@@ -18,7 +18,7 @@ public final class PermitAllUrl {
             "/actuator/jolokia", "/actuator/info", "/actuator/logfile", "/actuator/refresh", "/actuator/flyway", "/actuator/liquibase",
             "/actuator/heapdump", "/actuator/loggers", "/actuator/auditevents", "/actuator/env/PID", "/actuator/jolokia/**",
             "/v2/api-docs/**", "/swagger-ui.html", "/swagger-resources/**", "/webjars/**","/loginPage","/oauth/authorize","/index","/login/**","/logout",
-            "/login/facebook","/login/github","/hello","/","/login/qq"};
+            "/login/facebook","/login/github","/hello","/","/login/qq","/login**"};
 
 
     /**
