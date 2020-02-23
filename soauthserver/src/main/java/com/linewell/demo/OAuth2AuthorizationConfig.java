@@ -3,7 +3,9 @@ package com.linewell.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -35,20 +37,23 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-       /* oauthServer
+       oauthServer
                 .tokenKeyAccess("permitAll()")
                 .checkTokenAccess("permitAll()")
-                 .allowFormAuthenticationForClients();*/
-        oauthServer.allowFormAuthenticationForClients();
+               .tokenKeyAccess("isAuthenticated()")
+                 .allowFormAuthenticationForClients();
     }
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("eureka-client1")//客户端ID
-                .authorizedGrantTypes("password", "refresh_token")//设置验证方式
+                //.redirectUris("http://localhost:52601/login","http://localhost:9099/login","http://localhost:9099/info")
+                //.authorizedGrantTypes("authorization_code", "password", "refresh_token")//设置验证方式
+                .authorizedGrantTypes("authorization_code","client_credentials","password", "refresh_token")//设置验证方式
                 .scopes("read", "write")
                 .secret("secret_test")
+                .autoApprove()
                 .accessTokenValiditySeconds(10000) //token过期时间
                 .refreshTokenValiditySeconds(10000); //refresh过期时间
     }

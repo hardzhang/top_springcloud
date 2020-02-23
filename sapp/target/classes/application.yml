@@ -4,7 +4,9 @@ server:
 spring:
   application:
     name: eureka-client1
-
+  thymeleaf:
+    cache: false
+    
 eureka:
   instance:
     hostname: localhost
@@ -19,3 +21,15 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: eureka-client1
+      clientSecret: secret-test
+      accessTokenUri: http://localhost:8080/oauth/token
+      userAuthorizationUri: http://localhost:8080/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8080/principal

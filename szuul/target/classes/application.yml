@@ -25,7 +25,7 @@ security:
     client:
       access-token-uri: http://localhost:8080/oauth/token
       user-authorization-uri: http://localhost:8080/oauth/authorize
-      client-id: client_test
+      client-id: eureka-client1
       client-secret: secret_test
     resource:
       user-info-uri: http://localhost:8080/api/v1/users/principal

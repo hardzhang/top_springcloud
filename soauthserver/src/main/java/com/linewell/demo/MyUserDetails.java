@@ -1,7 +1,12 @@
 package com.linewell.demo;
 
-import java.util.Collections;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+
 /**
  * @Description:
  * @Author: Administrator
@@ -12,8 +17,8 @@ public class MyUserDetails extends User {
 
     private com.example.oauth.pojo.User user;
 
-    public MyUserDetails(com.example.oauth.pojo.User user) {
-        super(user.getUserName(), user.getPassword(), true, true, true, true, Collections.EMPTY_SET);
+    public MyUserDetails(com.example.oauth.pojo.User user,Set<GrantedAuthority> grantedAuths) {
+        super(user.getUserName(), user.getPassword(), true, true, true, true, grantedAuths);
         this.user = user;
     }
 
