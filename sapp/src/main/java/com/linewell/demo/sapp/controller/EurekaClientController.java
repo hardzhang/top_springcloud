@@ -37,4 +37,16 @@ public class EurekaClientController {
         String message = request.getScheme() + "://bax" + request.getServerName() + ":" + request.getServerPort() + request.getServletPath();
         return message;
     }
+
+    @RequestMapping("/index")
+    public String index(HttpServletRequest request) {
+        String message = request.getScheme() + "://bax" + request.getServerName() + ":" + request.getServerPort() + request.getServletPath();
+        return message;
+    }
+
+    @RequestMapping("/login")
+    public String callback(HttpServletRequest request) {
+        String message = request.getScheme() + "://bax" + request.getServerName() + ":" + request.getServerPort() + request.getServletPath();
+        return message;
+    }
 }

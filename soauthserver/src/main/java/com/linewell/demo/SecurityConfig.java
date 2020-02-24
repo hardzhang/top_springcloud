@@ -24,7 +24,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
  * 
  */
 @Order(1)
-@EnableOAuth2Client
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -90,14 +89,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.anyRequest().authenticated()
 				.and()
 				.formLogin()
-				//.defaultSuccessUrl("/index")       //设置登录成功默认跳转url
+				.defaultSuccessUrl("/index")       //设置登录成功默认跳转url
 				//.failureUrl()
 				.permitAll()	// 自定义登录页面，这里配置了 loginPage, 就会通过 LoginController 的 login 接口加载登录页面
-				.and()
-				.logout() //默认退出地址/logout
-				.deleteCookies("JSESSIONID")
-				.invalidateHttpSession(true)
-				.permitAll()                        //允许任何人访问登出url
 				.and().httpBasic()
 				.and().csrf().disable();
 	}

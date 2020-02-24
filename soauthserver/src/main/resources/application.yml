@@ -19,9 +19,11 @@ spring:
   #redis配置
   redis:
     database: 10
-    host: 192.168.153.3
+    host: 192.168.81.5
+    # Redis服务器端口
     port: 6379
-    password:
+    # Redis服务器连接密码（默认为空）
+    password: linewell@2018
     lettuce:
       pool:
         max-active: 8

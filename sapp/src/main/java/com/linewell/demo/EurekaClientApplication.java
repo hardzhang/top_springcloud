@@ -13,7 +13,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @EnableDiscoveryClient// 启用 eureka client 相关默认配置，在 Edgware 以后的版本该注解可以省略
 @SpringBootApplication
-@EnableOAuth2Sso
 public class EurekaClientApplication {
 
     public static void main(String[] args) {
