@@ -78,7 +78,7 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
                 .authorizedGrantTypes("authorization_code", "refresh_token",
                         "password", "implicit")// 授权类型
                 .scopes("all")
-                .redirectUris("http://localhost:52601/sapp/login","http://www.baidu.com")
+                .redirectUris("http://localhost:52601/login","http://www.baidu.com")
                 .autoApprove(true) // 自动认证
 				.accessTokenValiditySeconds(3600);
 

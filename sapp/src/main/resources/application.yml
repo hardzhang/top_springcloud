@@ -1,7 +1,7 @@
 server:
   port: 52601
   servlet:
-    context-path: /sapp
+    context-path: /
     session:
       cookie:
         name: OAUTH2SESSION

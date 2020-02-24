@@ -1,6 +1,7 @@
 server:
   port: 52601
   servlet:
+    context-path: /
     session:
       cookie:
         name: OAUTH2SESSION
@@ -31,7 +32,8 @@ security:
     enabled: false
   oauth2:
     client:
-      clientId: eureka-client1
+      scope: all
+      clientId: client1
       clientSecret: secret-test
       accessTokenUri: http://localhost:8080/oauth/token
       userAuthorizationUri: http://localhost:8080/oauth/authorize
