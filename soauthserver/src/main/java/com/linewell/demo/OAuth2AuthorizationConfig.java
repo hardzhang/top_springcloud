@@ -79,7 +79,7 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
                         "password", "implicit")// 授权类型
                 .scopes("all")
                 .redirectUris("http://localhost:52601/login","http://www.baidu.com")
-                .autoApprove(true) // 自动认证
+                //.autoApprove(true) // 自动认证
 				.accessTokenValiditySeconds(3600);
 
     }

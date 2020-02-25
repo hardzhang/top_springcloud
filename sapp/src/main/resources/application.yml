@@ -34,7 +34,7 @@ security:
     client:
       scope: all
       clientId: client1
-      clientSecret: secret-test
+      clientSecret: secret_test
       accessTokenUri: http://localhost:8080/oauth/token
       userAuthorizationUri: http://localhost:8080/oauth/authorize
     resource:

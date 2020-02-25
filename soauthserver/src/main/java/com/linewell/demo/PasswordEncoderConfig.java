@@ -19,7 +19,7 @@ public class PasswordEncoderConfig {
     }
 
     public static void main(String[] args){
-       System.out.println(new BCryptPasswordEncoder().encode("12345"));
+       System.out.println(new BCryptPasswordEncoder().encode("secret_test"));
         System.out.println(new BCryptPasswordEncoder().matches("12345","$2a$10$dA59l0QEOcm7Lg41T643cuOtLYEb4zZG5vgRlMnOj/IORtzQFzpWK"));
         System.out.println(new BCryptPasswordEncoder().matches("123456","$2a$10$qb2gNlqt3HINbkxwvddH7.QmCpDRyhTYaM/KhW4pRzTt6sOjDSUAO"));
 

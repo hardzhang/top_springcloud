@@ -10,7 +10,7 @@ import java.security.Principal;
 public class AccountController {
 
     @GetMapping("/principal")
-    @PreAuthorize("hasAnyAuthority('user')")
+    @PreAuthorize("hasAnyAuthority('ROLE_USER')")
     public Principal user(Principal principal) {
         return principal;
     }
